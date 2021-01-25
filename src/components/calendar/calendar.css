@@ -1,0 +1,70 @@
+.calendar {
+  width: 90%;
+  margin: auto auto 20px auto;
+}
+
+#root
+  > div
+  > div
+  > div.calendar
+  > div
+  > div.fc-header-toolbar.fc-toolbar
+  > div:nth-child(3)
+  > button {
+  text-transform: capitalize;
+  margin-right: 0px;
+  margin-bottom: 5px;
+}
+
+#root
+  > div
+  > div
+  > div.calendar
+  > div
+  > div.fc-header-toolbar.fc-toolbar
+  > div:nth-child(3) {
+  text-align: center;
+}
+
+#root
+  > div
+  > div
+  > div.calendar
+  > div
+  > div.fc-header-toolbar.fc-toolbar
+  > div:nth-child(3)
+  > div {
+  margin: 0px;
+}
+
+.fc-toolbar-chunk {
+  margin: 2px;
+}
+
+#root
+  > div
+  > div
+  > div.calendar
+  > div
+  > div.fc-header-toolbar.fc-toolbar
+  > div:nth-child(1)
+  > h2 {
+  padding-top: 10px;
+  margin: auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 400px) {
+  #root
+    > div
+    > div
+    > div.calendar
+    > div
+    > div.fc-header-toolbar.fc-toolbar
+    > div:nth-child(3)
+    > button {
+    text-transform: capitalize;
+    margin-right: 5px;
+    margin-bottom: 0px;
+  }
+}

@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+#new-gratitude {
+  background-color: #2c3e50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  width: 50%;
+}
+
+#new-gratitude:hover {
+  background-color: #a3a3a3;
+  color: #1b2733;
+}
+
+.form-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+  border: 5px solid #f1f1f1;
+  background-color: white;
+  z-index: 9;
+  overflow: auto;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  margin: auto;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container .btn {
+  background-color: #2c3e50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  margin: 10px auto;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: #a3a3a3;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
