@@ -1,15 +1,8 @@
 import React, { useState, useContext } from "react";
 import "./entry.css";
-
 import TokenService from "../../services/token-service";
 
-import GratitudeContext, {
-  GratitudeProvider,
-} from "../../contexts/GratitudeContext";
-
 const Entry = (props) => {
-  const context = useContext(GratitudeProvider);
-
   const [thankful_for, setThankfulFor] = useState("");
   const [did_well, setDidWell] = useState("");
   const [achieve, setAchieve] = useState("");
@@ -29,8 +22,6 @@ const Entry = (props) => {
       });
       props.setShowForm(false);
       props.getGratitudes();
-
-      // props.history.push;
     } catch (err) {
       console.error(err.message);
     }
