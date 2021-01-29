@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./entry.css";
 import TokenService from "../../services/token-service";
 
