@@ -13,7 +13,7 @@ const Entry = (props) => {
     try {
       const body = { thankful_for, did_well, achieve, soc };
       const response = await fetch(
-        "https://gratitudes-server.herokuapp.com/api/gratitudes",
+        "https://gratitudes-server.herokuapp.com/gratitudes",
         {
           method: "POST",
           headers: {
