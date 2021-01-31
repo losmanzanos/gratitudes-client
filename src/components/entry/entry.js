@@ -12,17 +12,14 @@ const Entry = (props) => {
     e.preventDefault();
     try {
       const body = { thankful_for, did_well, achieve, soc };
-      const response = await fetch(
-        "https://gratitudes-server.herokuapp.com/gratitudes",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            authorization: `bearer ${TokenService.getAuthToken()}`,
-          },
-          body: JSON.stringify(body),
-        }
-      );
+      const response = await fetch("http://localhost:8000/api/gratitudes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `bearer ${TokenService.getAuthToken()}`,
+        },
+        body: JSON.stringify(body),
+      });
       props.setShowForm(false);
       props.getGratitudes();
     } catch (err) {

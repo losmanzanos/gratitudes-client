@@ -4,7 +4,7 @@ import "./EditEntry.css";
 const EditEntry = (props) => {
   useEffect(async () => {
     const response = await fetch(
-      `http://https://gratitudes-server.herokuapp.com/gratitudes/${props.match.params.id}`,
+      `http://localhost:8000/api/gratitudes/${props.match.params.id}`,
       {
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -28,7 +28,7 @@ const EditEntry = (props) => {
     try {
       const body = { thankful_for, did_well, achieve, soc };
       const response = await fetch(
-        `http://https://gratitudes-server.herokuapp.com/gratitudes/${props.match.params.id}`,
+        `http://localhost:8000/api/gratitudes/${props.match.params.id}`,
         {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
@@ -46,7 +46,7 @@ const EditEntry = (props) => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `http://https://gratitudes-server.herokuapp.com/gratitudes/${props.match.params.id}`,
+        `http://localhost:8000/api/gratitudes/${props.match.params.id}`,
         {
           method: "DELETE",
         }
