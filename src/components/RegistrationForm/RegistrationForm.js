@@ -23,12 +23,12 @@ export default class RegistrationForm extends Component {
       user_name: user_name.value,
       password: password.value,
       full_name: full_name.value,
-      // nickname: nick_name.value,
+      nickname: nick_name.value,
     })
       .then((user) => {
         this.context.setAuthToken(user.authtoken);
         full_name.value = "";
-        // nick_name.value = "";
+        nick_name.value = "";
         user_name.value = "";
         password.value = "";
         this.props.onRegistrationSuccess();
@@ -76,14 +76,14 @@ export default class RegistrationForm extends Component {
             id="RegistrationForm__password"
           ></Input>
         </div>
-        {/* <div className="nick_name">
+        <div className="nick_name">
           <label htmlFor="RegistrationForm__nick_name">Nickname</label>
           <Input
             name="nick_name"
             type="text"
             id="RegistrationForm__nick_name"
           ></Input>
-        </div> */}
+        </div>
         <Button className="btn-primary">Register</Button>
       </form>
     );
